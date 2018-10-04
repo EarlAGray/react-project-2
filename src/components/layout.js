@@ -28,7 +28,10 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        {children()}
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div>
+          {children}
+        </div>
       </>
     )}
   />
