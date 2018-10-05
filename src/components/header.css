@@ -1,0 +1,54 @@
+.Header {
+    position: fixed;
+    width: 100%;
+    padding: 50px 0px;
+    z-index: 100; /* always use high # for objects you want to stay on top, low for back */
+    /* background: #000000;  */
+}
+
+.HeaderGroup {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, auto); /* takes components divides by 5 automatically adjusts width */
+    align-items: center; /* align is for vertical */
+    justify-items: center; /* justify is for center */
+}
+
+.Header a {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.Header button {
+    padding: 8px 20px;
+    font-size: 20px;
+    background: #56CCF2;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    outline: none; /* removes weird glow when clicking */
+    cursor: pointer;
+    transition: .8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Header button:hover {
+    background: #FFFFFF;
+    box-shadow: 0 10px 20px rgba (0, 0, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+/* if layout is LESS THAN 640 px, than these styles will be applied */
+@media (max-width: 640px) {
+    .Header {
+        padding: 15px 0;
+    }
+
+    .HeaderGroup {
+        grid-template-columns: repeat(4, auto);
+    }
+    .Header a:nth-child(4) {
+        display: none;
+    }
+
+}
