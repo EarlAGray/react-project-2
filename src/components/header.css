@@ -46,6 +46,7 @@
 
     .HeaderGroup {
         grid-template-columns: repeat(4, auto);
+        /* grid-gap: 20px; - use this to adjust to match widths  */
     }
     .Header a:nth-child(4) {
         display: none;
