@@ -11,6 +11,7 @@
     grid-template-rows: 1fr 1fr;
     /* divides into two equal rows */
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    cursor: pointer;
 }
 
 .Card:hover {

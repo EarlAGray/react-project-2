@@ -4,6 +4,14 @@
     padding: 50px 0px;
     z-index: 100; /* always use high # for objects you want to stay on top, low for back */
     /* background: #000000;  */
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)
+}
+
+.HeaderScrolled {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    backdrop-filter: blur(20px);
+
 }
 
 .HeaderGroup {

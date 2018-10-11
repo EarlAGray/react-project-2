@@ -6,16 +6,51 @@ import { Link } from 'gatsby'
 import './header.css'
 
 
-const Header = ({ siteTitle }) => (
-  <div className="Header"> 
-    <div className="HeaderGroup">
-      <Link to="/"><img src={require('/Users/earl.a.gray/Documents/GitHub/react-project/public/images/logo-designcode.svg')} width="30" /></Link>
-      <Link to="/courses">Courses</Link>
-      <Link to="/downloads">Downloads</Link>
-      <Link to="/workshops">Workshops</Link>
-      <Link to="/buy"><button>Buy</button></Link>
-    </div>
-  </div>
-)
+// const Header = ({ siteTitle }) => (
+// got rid of this to turn static component into a stateful component !!
+// )
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      hasScrolled: false
+    }
+  }
+  // setting initial state
+  
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+  // adding event listener
+
+  handleScroll = (event) => {
+    const scrollTop = window.pageYOffset
+
+    // console.log(window.pageYOffset); turn on to get value in console
+
+    if (scrollTop > 50) {
+      this.setState({ hasScrolled: true })
+    } else {
+      this.setState({ hasScrolled: false })
+    }
+  }
+
+  render() {
+    return (
+      <div className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}>
+       {/*? Asking if this state has changed, if so give the className of Header and HeaderScrolled, : if not, give className of "Header"  */}
+        <div className="HeaderGroup">
+          <Link to="/"><img src={require('/Users/earl.a.gray/Documents/GitHub/react-project/public/images/logo-designcode.svg')} width="30" /></Link>
+          <Link to="/courses">Courses</Link>
+          <Link to="/downloads">Downloads</Link>
+          <Link to="/workshops">Workshops</Link>
+          <Link to="/buy"><button>Buy</button></Link>
+        </div>
+      </div>
+    )
+  }
+}
 
 export default Header
