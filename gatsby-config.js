@@ -15,7 +15,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'public/images/gatsbyicon.png', 
+        icon: '../../../public/images/gatsbyicon.png', 
         // This path is relative to the root of the site. This is for storing websites on ios/android
       },
     },
