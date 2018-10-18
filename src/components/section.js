@@ -10,6 +10,7 @@ const SectionGroup = styled.div`
     grid-template-rows: 300px auto;
     grid-gap: 20px;
     position: relative;
+    
 
     @media (max-width: 720px) {
         ${'' /* grid-template-rows: auto 100%; */}
@@ -64,7 +65,6 @@ const WaveTop = styled.div`
     width: 100%;
     top: -6px;
     transform: rotate(180deg);
-
 `
 
 const Section = props => (

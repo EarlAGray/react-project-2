@@ -20,7 +20,7 @@
     display: grid;
     grid-template-columns: repeat(5, auto); /* takes components divides by 5 automatically adjusts width */
     align-items: center; /* align is for vertical */
-    justify-items: center; /* justify is for center */
+    justify-items: center; /* justify is for horizontal */
 }
 
 .Header a {
