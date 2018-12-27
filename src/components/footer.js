@@ -10,7 +10,7 @@ const FooterGroup = styled.div`
 const Text = styled.p`
     font-size: 24px;
     font-weight: 600;
-    color: #486791
+    color: #486791;
     max-width: 500px;
     margin: 0 auto;
 
@@ -40,7 +40,7 @@ const Button = styled.button`
 `
 const LinkGroup = styled.div`
     width: 500px;
-    margin: 50px auto;
+    margin: 0px auto 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
@@ -54,6 +54,15 @@ const LinkGroup = styled.div`
     }
 `
 
+const LinkGroupCaptions = styled.p`
+    width: 500px;
+    margin: 50px auto 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    line-height: 0px;
+`
+
 const Copyright = styled.div`
     color: #486791;
     max-width: 500px;
@@ -65,6 +74,10 @@ const Footer = ({data, children}) => (
     <FooterGroup>
         <Text>Tweet Yo! "Prototype and build apps with React and Swift. New Courses by @MengTo." </Text>
         <Button>Tweet</Button>
+        <LinkGroupCaptions>
+            <div>Hello</div>
+            <div>How Are You?</div>
+        </LinkGroupCaptions>
         <LinkGroup>    
             {data.allContentfulLink.edges.map(edge => (
                 <a href={edge.node.url}>{edge.node.title}</a>
