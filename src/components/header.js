@@ -42,7 +42,8 @@ class Header extends React.Component {
       <div className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}>
        {/*? Asking if this state has changed, if so give the className of Header and HeaderScrolled, : if not, give className of "Header"  */}
         <div className="HeaderGroup">
-          <Link to="/"><img src={require('../../public/images/logo-designcode.svg')} width="30" /></Link>
+          {/* <Link to="/"><img src={require('../../public/images/logo-portfolio.svg')} width="54" /></Link> */}
+          <a href= "mailto: earlagray@gmail.com"><img src={require('../../public/images/logo-portfolio.svg')} width="54"/></a>
           <Link to="/courses">Link_1</Link>
           <Link to="/downloads">Link_2</Link>
           <Link to="/workshops">Link_3</Link>
