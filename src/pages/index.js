@@ -38,9 +38,7 @@ const IndexPage = () => (
         <h1>E.A. Gray <br /> currently under construction</h1>
         <p>Thanks to DesignCode.io, I am currently building this website using ReactJS.</p>
         {/* <Link to="/page-2/">Watch the video</Link> */}
-        {/* <a href="/files/eagray_portfolio.pdf" target="_blank">Download My Portfolio</a> */}
-        <a alt="StackExchange Handbook" title="StackExchange Handbook"
-     href="/files/eagray_portfolio.pdf">Download Portfolio</a>
+        <a href="/files/eagray_portfolio.pdf" download target="_blank">Download My Portfolio</a>
         <div className="Logos">
           <img src={require('../../public/images/logo-sketch.png')} width="50"  alt=""/> 
           <img src={require('../../public/images/logo-figma.png')} width="50" /> 
